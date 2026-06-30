@@ -1,0 +1,19 @@
+{
+  "name": "navdeep-portfolio",
+  "version": "1.0.0",
+  "description": "Navdeep Sharma's Portfolio - Backend & Frontend",
+  "private": true,
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "dev:server": "cd server && npm start",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "dev": "echo 'Please run dev:server and dev:client in separate terminals'",
+    "start": "echo 'Run dev:server and dev:client separately'"
+  },
+  "keywords": ["portfolio", "nextjs", "nodejs", "websocket"],
+  "author": "Navdeep Sharma",
+  "license": "MIT"
+}
