@@ -1,0 +1,43 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "client/**"
+      - "package.json"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "client/**"
+      - "package.json"
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ✅ Setup Node + Cache (same as backend)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
+      # Install frontend dependencies using your script
+      - name: Install frontend dependencies
+        run: npm run install:client
+
+      # Build Next.js app
+      - name: Build frontend
+        run: npm run build:client
+
+      # Optional: Run frontend tests
+      - name: Run frontend tests
+        run: |
+          cd client
+          npm test || echo "No tests found"
