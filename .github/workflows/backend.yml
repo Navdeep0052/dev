@@ -1,0 +1,41 @@
+name: Backend CI
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "server/**"
+      - "package.json"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "server/**"
+      - "package.json"
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ✅ ADD CACHE INSIDE setup-node (BEST WAY)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+
+      # Install ONLY backend using your script
+      - name: Install backend dependencies
+        run: npm run install:server
+
+      # Run backend
+      - name: Start backend (check if it runs)
+        run: |
+          cd server
+          node server.js &
+          sleep 5
+          echo "Backend started successfully"
