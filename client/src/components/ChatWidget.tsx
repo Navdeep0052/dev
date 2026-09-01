@@ -77,28 +77,36 @@ export default function ChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gold-500 hover:bg-gold-400 text-navy-900 rounded-full shadow-xl shadow-gold-500/20 flex items-center justify-center transition-all hover:scale-110"
-          aria-label="Open chat"
+          className="fixed bottom-6 right-6 z-50 group flex items-center gap-3 pl-2.5 pr-4 py-2 bg-navy-950/90 hover:bg-navy-900 text-white rounded-full shadow-2xl shadow-gold-500/20 border border-gold-500/30 transition-all hover:scale-105 backdrop-blur-xl"
+          aria-label="Open chat with Navdeep"
         >
-          <MessageCircle className="w-6 h-6" />
+          <div className="relative w-9 h-9 rounded-full overflow-hidden border border-gold-400/60 flex-shrink-0">
+            <img src="/images/photo18.jpg" alt="Navdeep" className="w-full h-full object-cover object-top" />
+            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-navy-950" />
+          </div>
+          <div className="text-left hidden sm:block">
+            <p className="text-xs font-semibold text-white leading-tight">Chat with Navdeep</p>
+            <p className="text-[10px] text-gold-400 font-medium leading-tight">Available now</p>
+          </div>
+          <MessageCircle className="w-4 h-4 text-gold-400 ml-0.5 group-hover:scale-110 transition-transform" />
         </button>
       )}
 
       {/* Chat Panel */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[90vw] max-w-sm h-[500px] glass-card rounded-2xl shadow-2xl shadow-black/30 flex flex-col overflow-hidden border border-gold-500/20">
+        <div className="fixed bottom-6 right-6 z-50 w-[90vw] max-w-sm h-[500px] glass-card rounded-2xl shadow-2xl shadow-black/40 flex flex-col overflow-hidden border border-gold-500/30">
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 bg-navy-800/80 border-b border-gold-500/10">
+          <div className="flex items-center justify-between px-4 py-3 bg-navy-900/90 border-b border-gold-500/15 backdrop-blur-md">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-8 h-8 rounded-full bg-gold-500/20 flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-gold-400" />
+                <div className="w-9 h-9 rounded-full overflow-hidden border border-gold-400/60 bg-navy-950">
+                  <img src="/images/photo18.jpg" alt="Navdeep Sharma" className="w-full h-full object-cover object-top" />
                 </div>
-                <span className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-navy-800 ${connected ? "bg-green-400" : "bg-red-400"}`} />
+                <span className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-navy-900 ${connected ? "bg-emerald-400" : "bg-amber-400"}`} />
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white">Chat with Navdeep</h4>
-                <p className="text-[10px] text-slate-400">{connected ? "Online" : "Connecting..."}</p>
+                <h4 className="text-sm font-semibold text-white">Navdeep Sharma</h4>
+                <p className="text-[10px] text-gold-400 font-medium">{connected ? "Online • Instant reply" : "Connecting..."}</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -142,14 +150,19 @@ export default function ChatWidget() {
             ) : (
               <>
                 {messages.map((msg, i) => (
-                  <div key={i} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                    <div className={`max-w-[85%] px-3 py-2 rounded-xl text-sm ${
+                  <div key={i} className={`flex gap-2 items-end ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
+                    {msg.sender !== "user" && msg.type !== "system" && (
+                      <div className="w-6 h-6 rounded-full overflow-hidden border border-gold-400/50 flex-shrink-0 mb-1">
+                        <img src="/images/photo18.jpg" alt="Navdeep" className="w-full h-full object-cover object-top" />
+                      </div>
+                    )}
+                    <div className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-xs sm:text-sm leading-relaxed ${
                       msg.sender === "user"
-                        ? "bg-gold-500/20 text-white border border-gold-500/20"
-                        : "bg-navy-800 text-slate-300 border border-navy-700"
+                        ? "bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-medium rounded-br-none shadow-md"
+                        : "bg-navy-800/90 text-slate-200 border border-gold-500/15 rounded-bl-none shadow-md"
                     }`}>
                       {msg.sender !== "user" && msg.type !== "system" && (
-                        <div className="text-[10px] text-gold-400 font-medium mb-0.5">{msg.name}</div>
+                        <div className="text-[10px] text-gold-400 font-semibold mb-0.5">{msg.name}</div>
                       )}
                       <p>{msg.message}</p>
                     </div>

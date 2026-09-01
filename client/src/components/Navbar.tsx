@@ -50,6 +50,12 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full" />
               </a>
             ))}
+            <a
+              href="#contact"
+              className="px-4 py-2 rounded-full bg-gold-500/10 hover:bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-semibold tracking-wide transition-all hover:scale-105 hover:shadow-lg hover:shadow-gold-500/10"
+            >
+              Let's Talk
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
