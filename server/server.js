@@ -42,15 +42,15 @@ mongoose.connect(process.env.Status === "production"
 app.get("/api/portfolio", (req, res) => {
   res.json({
     name: "Navdeep Sharma",
-    title: "Backend Developer",
+    title: "Software Developer",
     tagline: "Building scalable, real-time & secure web applications",
     phone: "7027450052",
     email: "work.navdeep2@gmail.com",
     linkedin: "https://linkedin.com/in/navdeep-sharma-042091228/",
     location: "India",
-    summary: "Dedicated Backend Developer with 3 years of experience building scalable, real-time, and secure web applications. Focused on delivering reliable solutions, supporting team goals, and contributing to long-term success. Values clear communication, strong work ethics, and thoughtful collaboration—while taking initiative and stepping into leadership when needed.",
+    summary: "Dedicated Software Developer with 3 years of experience building scalable, real-time, and secure web applications. Focused on delivering reliable solutions, supporting team goals, and contributing to long-term success. Values clear communication, strong work ethics, and thoughtful collaboration—while taking initiative and stepping into leadership when needed.",
     skills: {
-      technical: ["JavaScript", "Node.js", "Express", "NestJS", "MongoDB", "SQL", "Git", "AWS S3", "Data Structures & Algorithms", "OOP", "HTML", "CSS", "Payment Gateways", "Third-Party APIs", "Socket.io", "Microservices"],
+      technical: ["JavaScript", "Node.js", "Express", "NestJS", "MongoDB", "SQL", "Git", "AWS EC2", "AWS S3", "CI/CD & Deployment", "Data Structures & Algorithms", "OOP", "HTML", "CSS", "Payment Gateways", "Third-Party APIs", "Socket.io", "Microservices"],
       soft: ["Flexibility", "Adaptability", "Time Management", "Teamwork", "Leadership"]
     },
     experience: [
@@ -192,15 +192,15 @@ wss.on("connection", (ws, req) => {
         let reply = ""
         
         if (lowerMsg.includes("experience") || lowerMsg.includes("work")) {
-          reply = "I have 3 years of experience as a Backend Developer. Currently I'm a Backend Developer at FictiveBox Digital working on Indian Railway projects (HAHW, Canteen Management, Grievance System) and FARMLANDBAZAAR. Previously at Dream Big IT Solution, I worked on CYBERYAMI."
+          reply = "I have 3 years of experience as a Software Developer. Currently I'm a Backend Developer at FictiveBox Digital working on Indian Railway projects (HAHW, Canteen Management, Grievance System) and FARMLANDBAZAAR. Previously at Dream Big IT Solution, I worked on CYBERYAMI."
         } else if (lowerMsg.includes("skill") || lowerMsg.includes("tech")) {
-          reply = "My technical skills include JavaScript, Node.js, Express, NestJS, MongoDB, SQL, Git, AWS S3, Socket.io, Microservices, Payment Gateways, and Third-Party APIs. I'm also proficient in Data Structures & Algorithms and OOP."
+          reply = "My technical skills include JavaScript, Node.js, Express, NestJS, MongoDB, SQL, Git, AWS (EC2 & S3), CI/CD Deployment Pipelines, Socket.io, Microservices, Payment Gateways, and Third-Party APIs. I'm also proficient in Data Structures & Algorithms and OOP."
         } else if (lowerMsg.includes("contact") || lowerMsg.includes("email") || lowerMsg.includes("phone")) {
           reply = "You can reach me at work.navdeep2@gmail.com or call me at 7027450052. You can also connect with me on LinkedIn: linkedin.com/in/navdeep-sharma-042091228/"
         } else if (lowerMsg.includes("project") || lowerMsg.includes("product")) {
           reply = "I've worked on several notable projects: HAHW (India's first Railway certified IoT monitoring system), FARMLANDBAZAAR (real estate platform), Indian Railway Canteen & Grievance Management apps, and CYBERYAMI (cybersecurity learning platform)."
         } else if (lowerMsg.includes("hello") || lowerMsg.includes("hi")) {
-          reply = "Hello! I'm Navdeep Sharma, a Backend Developer. Feel free to ask me about my experience, skills, projects, or how to get in touch!"
+          reply = "Hello! I'm Navdeep Sharma, a Software Developer. Feel free to ask me about my experience, skills, projects, or how to get in touch!"
         } else {
           reply = "Thank you for your message! I'll get back to you soon. In the meantime, feel free to explore my portfolio or use the contact form to reach out directly."
         }

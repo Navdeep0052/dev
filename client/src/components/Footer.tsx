@@ -65,7 +65,7 @@ export default function Footer() {
               Navdeep<span className="text-gold-400">.</span>
             </h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Backend Developer crafting scalable, real-time, and secure web applications. Building the future one API at a time.
+              Software Developer crafting scalable, real-time, and secure web applications. Building the future one API at a time.
             </p>
           </div>
           <div className="space-y-4">

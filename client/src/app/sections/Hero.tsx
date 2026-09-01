@@ -87,7 +87,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl sm:text-2xl md:text-3xl text-slate-300 font-light tracking-wide">
-            Backend Developer
+            Software Developer
           </p>
           
           <p className="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed">

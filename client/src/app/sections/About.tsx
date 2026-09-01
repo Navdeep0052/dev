@@ -33,13 +33,13 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
-                I am a Backend Developer with 3 years of experience building scalable, real-time, and secure web applications. My journey has taken me from intensive training at FunctionUp to leading backend development at FictiveBox Digital, where I work on India's first Railway-certified IoT monitoring systems.
+                I am a Software Developer with 3 years of experience building scalable, real-time, and secure web applications. My journey has taken me from intensive training at FunctionUp to leading backend development at FictiveBox Digital, where I work on India's first Railway-certified IoT monitoring systems.
               </p>
               <p>
                 I focus on delivering reliable solutions that support team goals and contribute to long-term success. I value clear communication, strong work ethics, and thoughtful collaboration—while taking initiative and stepping into leadership when needed.
               </p>
               <p>
-                From real-time Socket.io chat systems to microservices architecture on AWS, I bring a versatile skill set that adapts to the project's needs.
+                From deploying production web applications on AWS EC2 with automated CI/CD pipelines to real-time Socket.io communication and cloud microservices, I bring a versatile skill set that ensures reliable, scalable delivery.
               </p>
             </div>
             

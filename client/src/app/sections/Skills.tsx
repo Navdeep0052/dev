@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { 
   Code, Server, Database, Cloud, GitBranch, 
-  Layers, Zap, CreditCard, Globe, Layout, Settings, Users 
+  Layers, Zap, CreditCard, Globe, Layout, Settings, Users, Rocket 
 } from "lucide-react";
 
 const skillCategories = [
@@ -18,11 +18,13 @@ const skillCategories = [
     ],
   },
   {
-    title: "Databases & Storage",
+    title: "Cloud & Databases",
     skills: [
+      { name: "AWS EC2", icon: Cloud, level: 88 },
+      { name: "AWS S3", icon: Cloud, level: 85 },
+      { name: "CI/CD & Deployment", icon: Rocket, level: 84 },
       { name: "MongoDB", icon: Database, level: 92 },
       { name: "SQL", icon: Database, level: 78 },
-      { name: "AWS S3", icon: Cloud, level: 85 },
     ],
   },
   {

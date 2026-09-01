@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="45%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="strokeG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ca8a04" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#eab308" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#eab308" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Base rounded badge -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgG)" stroke="url(#strokeG)" stroke-width="2.5"/>
+  <rect x="5" y="5" width="54" height="54" rx="13" fill="none" stroke="#eab308" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- Code bracket accent (left <) -->
+  <path d="M12 25 L7 32 L12 39" fill="none" stroke="#eab308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6"/>
+
+  <!-- Code bracket accent (right >) -->
+  <path d="M52 25 L57 32 L52 39" fill="none" stroke="#eab308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6"/>
+
+  <!-- Monogram NS with glow -->
+  <g filter="url(#goldGlow)">
+    <!-- Letter N -->
+    <path d="M17 44 V20 H22.5 L30.8 33.8 V20 H35 V44 H29.8 L21.2 29.8 V44 Z" fill="url(#goldG)"/>
+
+    <!-- Letter S -->
+    <path d="M47.2 23.6 C45.8 21.3 43.4 20 40 20 C35.8 20 33.4 22.3 33.4 25.4 C33.4 27.9 34.8 29.5 38.6 30.8 L40.8 31.5 C43.4 32.4 44.5 33.6 44.5 35.4 C44.5 38 42.2 39.8 38.5 39.8 C35.6 39.8 33.5 38.6 32 36.7 L30 40.4 C32.2 42.8 35.2 44.2 38.8 44.2 C44.8 44.2 48.8 40.6 48.8 35.2 C48.8 32.1 47.1 29.9 43.2 28.6 L41 27.9 C38.7 27.1 37.8 26.1 37.8 24.6 C37.8 22.9 39.4 21.7 41.8 21.7 C43.8 21.7 45.2 22.5 46.2 23.9 Z" fill="#ffffff"/>
+
+    <!-- Glowing Accent Dot '.' -->
+    <circle cx="50" cy="42.5" r="2.2" fill="url(#goldG)"/>
+  </g>
+</svg>

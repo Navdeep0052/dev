@@ -11,12 +11,13 @@ const experiences = [
     location: "India",
     highlights: [
       "Leading backend development for India's first Railway-certified IoT monitoring system (HAHW)",
+      "Deployed and maintained production applications on AWS EC2 with CI/CD automation",
       "Built real-time alarm and notification systems using Socket.io for critical railway safety",
       "Integrated RFID tracking, AWS S3 storage, and third-party SMS APIs",
       "Developed FARMLANDBAZAAR real estate platform with live chat and payment gateways",
       "Built Indian Railway Canteen & Grievance Management systems with real-time tracking",
     ],
-    tech: ["Node.js", "Express", "MongoDB", "Socket.io", "AWS S3", "NestJS", "Payment Gateways"],
+    tech: ["Node.js", "Express", "MongoDB", "AWS EC2", "AWS S3", "CI/CD", "Socket.io", "NestJS", "Payment Gateways"],
   },
   {
     role: "Backend Developer",

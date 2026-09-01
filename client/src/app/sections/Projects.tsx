@@ -16,9 +16,9 @@ const projects = [
   {
     name: "FARMLANDBAZAAR",
     tagline: "Real Estate Platform",
-    description: "Subscription-based real estate platform enabling brokerage-free property buying and selling. Features live chat between buyers and sellers, integrated payment gateways, and Google Maps geolocation services.",
+    description: "Subscription-based real estate platform enabling brokerage-free property buying and selling. Deployed on AWS EC2 with CI/CD automation; features live chat between buyers and sellers, integrated payment gateways, and Google Maps geolocation services.",
     icon: ShoppingCart,
-    tech: ["Node.js", "Express", "MongoDB", "Socket.io", "Payment Gateway", "Google Maps"],
+    tech: ["Node.js", "Express", "MongoDB", "AWS EC2", "CI/CD", "Socket.io", "Payment Gateway"],
     color: "from-green-500/20 to-emerald-500/20",
     accent: "text-green-400",
   },
